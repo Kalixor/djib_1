@@ -5,15 +5,15 @@ import { useTheme } from '../context/ThemeContext'
 
       return (
         <nav className="bg-white dark:bg-gray-800 shadow p-4">
-          <div className="container mx-auto flex justify-center items-center space-x-4">
-            <h1 className="text-xl font-bold text-gray-800 dark:text-white">
+          <div className="container mx-auto flex justify-between items-center">
+            <h1 className="text-xl font-bold text-gray-800 dark:text-white text-center flex-1">
               Activités des Douanes
             </h1>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700"
+              className="p-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
             >
-              {darkMode ? '🌞' : '🌙'}
+              <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'} text-xl text-gray-800 dark:text-gray-200`} />
             </button>
           </div>
         </nav>
