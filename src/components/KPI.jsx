@@ -99,7 +99,7 @@ import { useState } from 'react'
             <>
               <button
                 onClick={toggleSort}
-                className="absolute bottom-1 right-8 p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+                className="absolute bottom-1 right-20 p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
               >
                 <i className={`fas ${sortAscending ? 'fa-sort-amount-down-alt' : 'fa-sort-amount-up'} text-xs text-gray-800 dark:text-gray-200`} />
               </button>
