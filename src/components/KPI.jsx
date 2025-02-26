@@ -4,6 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 const KPI = ({ title, value, isActive, onClick }) => {
   const [sortAscending, setSortAscending] = useState(true)
   const [isChartView, setIsChartView] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(null)
   const kpiRef = useRef(null)
 
   // Variantes de jaune
@@ -17,6 +18,14 @@ const KPI = ({ title, value, isActive, onClick }) => {
     '#FFA500', // Orange
     '#FF8C00'  // Orange foncé
   ]
+
+  const onPieEnter = (_, index) => {
+    setActiveIndex(index)
+  }
+
+  const onPieLeave = () => {
+    setActiveIndex(null)
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -121,11 +130,21 @@ const KPI = ({ title, value, isActive, onClick }) => {
               paddingAngle={5}
               dataKey="value"
               label
+              activeIndex={activeIndex}
+              activeShape={{
+                outerRadius: 90,
+                innerRadius: 50,
+                fill: '#FFC300'
+              }}
+              onMouseEnter={onPieEnter}
+              onMouseLeave={onPieLeave}
             >
               {data.map((entry, index) => (
                 <Cell 
                   key={`cell-${index}`} 
                   fill={YELLOW_COLORS[index % YELLOW_COLORS.length]}
+                  strokeWidth={activeIndex === index ? 3 : 1}
+                  stroke="#FF8C00"
                 />
               ))}
             </Pie>
