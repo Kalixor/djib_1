@@ -284,6 +284,72 @@ const KPI = ({ title, value, isActive, onClick }) => {
     )
   }
 
+  const variations = {
+    'Importations': { value: 2.5, trend: 'up' },
+    'Exportations': { value: 1.8, trend: 'down' },
+    'Manifestes': { value: 0.3, trend: 'up' },
+    'Recettes Totales': { value: 4.2, trend: 'up' }
+  }
+
+  const renderKPIHeader = () => {
+    const variation = variations[title]
+    const arrowClass = variation.trend === 'up' 
+      ? 'fas fa-arrow-up' 
+      : 'fas fa-arrow-down'
+
+    return (
+      <div className="flex justify-between items-start w-full">
+        <div className="flex-1">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300">
+            {title}
+          </h3>
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            {value}
+          </p>
+        </div>
+        
+        {/* Bloc variation avec hover corrigé pour les diminutions */}
+        <div className="flex flex-col items-center justify-center mr-8">
+          <div className="transition-colors duration-300">
+            <i className={`${arrowClass} text-lg ${
+              isActive
+                ? variation.trend === 'up' 
+                  ? 'text-green-500' 
+                  : 'text-red-500'
+                : `text-gray-400 ${
+                    variation.trend === 'up' 
+                      ? 'group-hover:text-green-500' 
+                      : 'group-hover:text-red-500'
+                  }`
+            }`} />
+          </div>
+          <span className={`text-xs transition-colors duration-300 ${
+            isActive
+              ? variation.trend === 'up' 
+                ? 'text-green-500' 
+                : 'text-red-500'
+              : `text-gray-400 ${
+                  variation.trend === 'up' 
+                    ? 'group-hover:text-green-500' 
+                    : 'group-hover:text-red-500'
+                }`
+          }`}>
+            {variation.value}%
+          </span>
+        </div>
+
+        {/* Picto KPI */}
+        <div className="ml-4">
+          <i className={`${getIcon()} text-3xl ${
+            isActive
+              ? 'text-yellow-400'
+              : 'text-gray-300 dark:text-gray-600 group-hover:text-yellow-400'
+          } transition-colors duration-300`} />
+        </div>
+      </div>
+    )
+  }
+  
   return (
     <div 
       ref={kpiRef}
@@ -294,35 +360,21 @@ const KPI = ({ title, value, isActive, onClick }) => {
       } border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300 cursor-pointer relative`}
       onClick={onClick}
     >
-      <div className="flex justify-between items-start">
-        <div>
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
-            {value}
-          </p>
-        </div>
-        <i className={`${getIcon()} text-3xl ${
-          isActive
-            ? 'text-yellow-400'
-            : 'text-gray-300 dark:text-gray-600 group-hover:text-yellow-400'
-        } transition-colors duration-300`} />
-      </div>
+      {renderKPIHeader()}
 
       {isActive && (
         <>
-          <div className="absolute bottom-1 right-20 flex gap-2">
+          <div className="absolute bottom-1 right-3 flex gap-1">
             <button
               onClick={toggleView}
-              className="p-[0.35rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              className="m-[0.20rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
               title="Toggle View"
             >
               <i className={`fas ${isChartView ? 'fa-list' : 'fa-chart-pie'} text-xs text-gray-800 dark:text-gray-200`} />
             </button>
             <button
               onClick={toggleSort}
-              className="p-[0.35rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              className=" m-[0.20rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
               title="Sort"
             >
               <i className={`fas ${sortAscending ? 'fa-sort-amount-down-alt' : 'fa-sort-amount-up'} text-xs text-gray-800 dark:text-gray-200`} />
