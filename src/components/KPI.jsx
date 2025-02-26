@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
+import { PieChart, Pie, Cell, ResponsiveContainer, Text } from 'recharts'
 
 const KPI = ({ title, value, isActive, onClick }) => {
   const [sortAscending, setSortAscending] = useState(true)
@@ -27,6 +27,55 @@ const KPI = ({ title, value, isActive, onClick }) => {
     setActiveIndex(null)
   }
 
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+    const RADIAN = Math.PI / 180
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5
+    const x = cx + radius * Math.cos(-midAngle * RADIAN)
+    const y = cy + radius * Math.sin(-midAngle * RADIAN)
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="#333"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{
+          fontSize: '0.8rem',
+          fontWeight: 'bold',
+          pointerEvents: 'none',  // Empêche l'interaction avec les labels
+          opacity: 1,  // Opacité constante
+          transition: 'none'  // Pas d'animation
+        }}
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    )
+  }
+
+  const renderCenterLabel = () => {
+    if (activeIndex === null) return null
+    
+    const activeItem = getSubItems()[activeIndex]
+    return (
+      <text
+        x="50%"
+        y="50%"
+        fill="#FFC300"  // Jaune flashy
+        textAnchor="middle"
+        dominantBaseline="middle"
+        style={{
+          fontSize: '1.2rem',  // Taille légèrement augmentée
+          fontWeight: 'bold',
+          textShadow: '0 0 4px rgba(255,195,0,0.8)',  // Ombre portée jaune
+          filter: 'none'  // Suppression du flou
+        }}
+      >
+        {activeItem.name}
+      </text>
+    )
+  }
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (kpiRef.current && !kpiRef.current.contains(event.target)) {
@@ -52,7 +101,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
     }
   }
 
-	const getSubItemIcon = (label) => {
+  const getSubItemIcon = (label) => {
     switch(label) {
       case 'Produits agricoles': return 'fas fa-wheat-awn'
       case 'Matériel industriel': return 'fas fa-industry'
@@ -117,23 +166,25 @@ const KPI = ({ title, value, isActive, onClick }) => {
     const data = getSubItems()
 
     return (
-      <div className="h-64 w-full">
+      <div className="h-96 w-full">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
               data={data}
               cx="50%"
               cy="50%"
-              innerRadius={60}
-              outerRadius={80}
+              innerRadius={80}
+              outerRadius={120}
               fill="#FFD700"
               paddingAngle={5}
               dataKey="value"
-              label
+              label={renderCustomizedLabel}
+              labelLine={false}
+              isAnimationActive={false}  // Désactive les animations
               activeIndex={activeIndex}
               activeShape={{
-                outerRadius: 90,
-                innerRadius: 50,
+                outerRadius: 130,
+                innerRadius: 70,
                 fill: '#FFC300'
               }}
               onMouseEnter={onPieEnter}
@@ -143,11 +194,12 @@ const KPI = ({ title, value, isActive, onClick }) => {
                 <Cell 
                   key={`cell-${index}`} 
                   fill={YELLOW_COLORS[index % YELLOW_COLORS.length]}
-                  strokeWidth={activeIndex === index ? 3 : 1}
+                  strokeWidth={activeIndex === index ? 2 : 1}
                   stroke="#FF8C00"
                 />
               ))}
             </Pie>
+            {renderCenterLabel()}
           </PieChart>
         </ResponsiveContainer>
       </div>
@@ -209,14 +261,14 @@ const KPI = ({ title, value, isActive, onClick }) => {
           <div className="absolute bottom-1 right-20 flex gap-2">
             <button
               onClick={toggleView}
-              className="p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              className="p-[0.35rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
               title="Toggle View"
             >
               <i className={`fas ${isChartView ? 'fa-list' : 'fa-chart-pie'} text-xs text-gray-800 dark:text-gray-200`} />
             </button>
             <button
               onClick={toggleSort}
-              className="p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              className="p-[0.35rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
               title="Sort"
             >
               <i className={`fas ${sortAscending ? 'fa-sort-amount-down-alt' : 'fa-sort-amount-up'} text-xs text-gray-800 dark:text-gray-200`} />
