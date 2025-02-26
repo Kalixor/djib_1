@@ -26,6 +26,75 @@ const KPI = ({ title, value, isActive, onClick }) => {
   const onPieLeave = () => {
     setActiveIndex(null)
   }
+	
+  const renderTopLabel = () => {
+    if (activeIndex === null) return null
+    
+    const activeItem = getSubItems()[activeIndex]
+    const truncatedLabel = activeItem.name.length > 14 
+      ? `${activeItem.name.substring(0, 14)}...` 
+      : activeItem.name
+
+    return (
+      <text
+        x="50%"
+        y="10%"  // Positionné en haut
+        fill="#a8a9a7"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        style={{
+          fontSize: '1.4rem',  // Taille augmentée
+          fontWeight: 'bold',
+          textShadow: '0 0 4px rgba(255,195,0,0.8)',
+          filter: 'none'
+        }}
+      >
+        {activeItem.name}
+      </text>
+    )
+  }
+
+  const renderCenterLabel = () => {
+    const currentIndex = activeIndex !== null ? activeIndex : 0
+    const activeItem = getSubItems()[currentIndex]
+    const iconClass = getSubItemIcon(activeItem.name)
+
+    return (
+      <>
+        {/* Icone en fond - Taille augmentée */}
+        <foreignObject x="30%" y="30%" width="40%" height="40%">
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100%',
+            width: '100%',
+            opacity: 0.2
+          }}>
+            <i className={`${iconClass} text-8xl text-yellow-400`} />  {/* text-6xl -> text-8xl */}
+          </div>
+        </foreignObject>
+
+        {/* Total au centre */}
+        <text
+          x="50%"
+          y="50%"
+          fill="#f9f7f7"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          style={{
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            textShadow: '0 0 4px rgba(255,195,0,0.8)',
+            filter: 'none',
+            opacity: 1
+          }}
+        >
+          {`${activeItem.value}M`}
+        </text>
+      </>
+    )
+  }
 
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
     const RADIAN = Math.PI / 180
@@ -41,11 +110,11 @@ const KPI = ({ title, value, isActive, onClick }) => {
         textAnchor="middle"
         dominantBaseline="central"
         style={{
-          fontSize: '0.8rem',
+          fontSize: '0.9rem',
           fontWeight: 'bold',
-          pointerEvents: 'none',  // Empêche l'interaction avec les labels
-          opacity: 1,  // Opacité constante
-          transition: 'none'  // Pas d'animation
+          pointerEvents: 'none',
+          opacity: 1,
+          transition: 'none'
         }}
       >
         {`${(percent * 100).toFixed(0)}%`}
@@ -53,29 +122,13 @@ const KPI = ({ title, value, isActive, onClick }) => {
     )
   }
 
-  const renderCenterLabel = () => {
-    if (activeIndex === null) return null
-    
-    const activeItem = getSubItems()[activeIndex]
-    return (
-      <text
-        x="50%"
-        y="50%"
-        fill="#FFC300"  // Jaune flashy
-        textAnchor="middle"
-        dominantBaseline="middle"
-        style={{
-          fontSize: '1.2rem',  // Taille légèrement augmentée
-          fontWeight: 'bold',
-          textShadow: '0 0 4px rgba(255,195,0,0.8)',  // Ombre portée jaune
-          filter: 'none'  // Suppression du flou
-        }}
-      >
-        {activeItem.name}
-      </text>
-    )
-  }
+  useEffect(() => {
+    if (isActive) {
+      setActiveIndex(0)
+    }
+  }, [isActive])
 
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (kpiRef.current && !kpiRef.current.contains(event.target)) {
@@ -180,7 +233,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
               dataKey="value"
               label={renderCustomizedLabel}
               labelLine={false}
-              isAnimationActive={false}  // Désactive les animations
+              isAnimationActive={false}
               activeIndex={activeIndex}
               activeShape={{
                 outerRadius: 130,
@@ -199,13 +252,14 @@ const KPI = ({ title, value, isActive, onClick }) => {
                 />
               ))}
             </Pie>
+            {renderTopLabel()}
             {renderCenterLabel()}
           </PieChart>
         </ResponsiveContainer>
       </div>
     )
   }
-
+  
   const renderList = () => {
     const data = getSubItems()
 
