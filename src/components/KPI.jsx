@@ -1,10 +1,22 @@
-import { useState, useEffect, useRef } from 'react'
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
+import React, { useState, useEffect, useRef } from 'react'
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 const KPI = ({ title, value, isActive, onClick }) => {
   const [sortAscending, setSortAscending] = useState(true)
   const [isChartView, setIsChartView] = useState(false)
   const kpiRef = useRef(null)
+
+  // Variantes de jaune
+  const YELLOW_COLORS = [
+    '#FFD700', // Or
+    '#FFC300', // Jaune vif
+    '#FFA500', // Orange
+    '#FF8C00', // Orange foncé
+    '#FFD700', // Or
+    '#FFC300', // Jaune vif
+    '#FFA500', // Orange
+    '#FF8C00'  // Orange foncé
+  ]
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -31,7 +43,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
     }
   }
 
-  const getSubItemIcon = (label) => {
+	const getSubItemIcon = (label) => {
     switch(label) {
       case 'Produits agricoles': return 'fas fa-wheat-awn'
       case 'Matériel industriel': return 'fas fa-industry'
@@ -48,7 +60,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
       default: return 'fas fa-circle-info'
     }
   }
-
+	
   const getSubItems = () => {
     const items = {
       'Importations': [
@@ -94,7 +106,6 @@ const KPI = ({ title, value, isActive, onClick }) => {
 
   const renderChart = () => {
     const data = getSubItems()
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
 
     return (
       <div className="h-64 w-full">
@@ -106,16 +117,18 @@ const KPI = ({ title, value, isActive, onClick }) => {
               cy="50%"
               innerRadius={60}
               outerRadius={80}
-              fill="#8884d8"
+              fill="#FFD700"
               paddingAngle={5}
               dataKey="value"
               label
             >
               {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                <Cell 
+                  key={`cell-${index}`} 
+                  fill={YELLOW_COLORS[index % YELLOW_COLORS.length]}
+                />
               ))}
             </Pie>
-            <Tooltip />
           </PieChart>
         </ResponsiveContainer>
       </div>
@@ -125,7 +138,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
   const renderList = () => {
     const data = getSubItems()
 
-    return (
+     return (
       <div className="p-3 space-y-2">
         {data.map((item, index) => (
           <div 
