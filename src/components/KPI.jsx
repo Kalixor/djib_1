@@ -298,7 +298,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
       : 'fas fa-arrow-down'
   
     return (
-      <div className="flex justify-between items-start w-full">
+      <div className="flex justify-between items-start w-full min-h-[60px]"> {/* Ajout de min-h */}
         <div className="flex-1">
           <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300">
             {title}
@@ -308,7 +308,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
           </p>
         </div>
         
-        <div className="flex flex-col items-center justify-center mr-8">
+        <div className="flex flex-col items-center justify-center mr-1">
           <div className="transition-colors duration-300">
             <i className={`${arrowClass} text-lg ${
               isActive
@@ -359,10 +359,10 @@ const KPI = ({ title, value, isActive, onClick }) => {
       onClick={onClick}
     >
       {renderKPIHeader()}
-
+  
       {isActive && (
         <>
-            <div className="absolute bottom-1 right-2 flex gap-2">
+            <div className="absolute bottom-2 right-2 flex gap-2">
             <button
                 onClick={toggleView}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300 flex items-center justify-center w-5 h-5"
@@ -370,7 +370,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
             >
                 <i className={`fas ${
                 isChartView ? 'fa-list text-yellow-500' : 'fa-chart-pie text-gray-800 dark:text-gray-200'
-                } text-lg transition-colors duration-300`} />
+                } text-xl transition-colors duration-300`} /> {/* Changé de text-lg à text-xl */}
             </button>
             <button
                 onClick={toggleSort}
@@ -379,7 +379,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
             >
                 <i className={`fas ${
                 sortAscending ? 'fa-sort-amount-down-alt text-yellow-500' : 'fa-sort-amount-up text-gray-800 dark:text-gray-200'
-                } text-lg transition-colors duration-300`} />
+                } text-xl transition-colors duration-300`} /> {/* Changé de text-lg à text-xl */}
             </button>
             </div>
 
@@ -387,7 +387,8 @@ const KPI = ({ title, value, isActive, onClick }) => {
             {isChartView ? renderChart() : renderList()}
             </div>
         </>
-)}
+        )}
+
     </div>
   )
 }
