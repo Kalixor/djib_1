@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 
 const KPI = ({ title, value, isActive, onClick }) => {
   const [sortAscending, setSortAscending] = useState(true)
+  const [isChartView, setIsChartView] = useState(false)
   const kpiRef = useRef(null)
 
   useEffect(() => {
@@ -50,40 +52,98 @@ const KPI = ({ title, value, isActive, onClick }) => {
   const getSubItems = () => {
     const items = {
       'Importations': [
-        { label: 'Produits agricoles', value: '4.2M', percentage: '34%' },
-        { label: 'Matériel industriel', value: '3.8M', percentage: '30%' },
-        { label: 'Produits chimiques', value: '2.5M', percentage: '20%' },
-        { label: 'Autres', value: '2.0M', percentage: '16%' }
+        { name: 'Produits agricoles', value: 4.2 },
+        { name: 'Matériel industriel', value: 3.8 },
+        { name: 'Produits chimiques', value: 2.5 },
+        { name: 'Autres', value: 2.0 }
       ],
       'Exportations': [
-        { label: 'Textiles', value: '3.0M', percentage: '37%' },
-        { label: 'Produits pétroliers', value: '2.5M', percentage: '30%' },
-        { label: 'Métaux', value: '1.7M', percentage: '21%' },
-        { label: 'Autres', value: '1.0M', percentage: '12%' }
+        { name: 'Textiles', value: 3.0 },
+        { name: 'Produits pétroliers', value: 2.5 },
+        { name: 'Métaux', value: 1.7 },
+        { name: 'Autres', value: 1.0 }
       ],
       'Manifestes': [
-        { label: 'Maritimes', value: '800', percentage: '67%' },
-        { label: 'Aériens', value: '300', percentage: '25%' },
-        { label: 'Terrestres', value: '100', percentage: '8%' }
+        { name: 'Maritimes', value: 800 },
+        { name: 'Aériens', value: 300 },
+        { name: 'Terrestres', value: 100 }
       ],
       'Recettes Totales': [
-        { label: 'Droits de douane', value: '12.5M', percentage: '60%' },
-        { label: 'Taxes', value: '5.2M', percentage: '25%' },
-        { label: 'Amendes', value: '2.0M', percentage: '10%' },
-        { label: 'Autres', value: '1.0M', percentage: '5%' }
+        { name: 'Droits de douane', value: 12.5 },
+        { name: 'Taxes', value: 5.2 },
+        { name: 'Amendes', value: 2.0 },
+        { name: 'Autres', value: 1.0 }
       ]
     }
 
-    return (items[title] || []).sort((a, b) => {
-      const valueA = parseFloat(a.value)
-      const valueB = parseFloat(b.value)
-      return sortAscending ? valueA - valueB : valueB - valueA
+    const data = items[title] || []
+    return data.sort((a, b) => {
+      return sortAscending ? a.value - b.value : b.value - a.value
     })
   }
 
   const toggleSort = (e) => {
     e.stopPropagation()
     setSortAscending(!sortAscending)
+  }
+
+  const toggleView = (e) => {
+    e.stopPropagation()
+    setIsChartView(!isChartView)
+  }
+
+  const renderChart = () => {
+    const data = getSubItems()
+    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
+
+    return (
+      <div className="h-64 w-full">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={data}
+              cx="50%"
+              cy="50%"
+              innerRadius={60}
+              outerRadius={80}
+              fill="#8884d8"
+              paddingAngle={5}
+              dataKey="value"
+              label
+            >
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+            </Pie>
+            <Tooltip />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+    )
+  }
+
+  const renderList = () => {
+    const data = getSubItems()
+
+    return (
+      <div className="p-3 space-y-2">
+        {data.map((item, index) => (
+          <div 
+            key={index} 
+            className="group/subitem grid grid-cols-[minmax(120px,1fr)_80px_32px] items-center gap-2 p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+          >
+            <div className="min-w-0">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-300 truncate">{item.name}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{((item.value / data.reduce((sum, i) => sum + i.value, 0)) * 100).toFixed(0)}%</p>
+            </div>
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
+              {item.value}M
+            </p>
+            <i className={`${getSubItemIcon(item.name)} text-xl text-gray-300 dark:text-gray-600 group-hover/subitem:text-yellow-400 transition-colors duration-300`} />
+          </div>
+        ))}
+      </div>
+    )
   }
 
   return (
@@ -114,31 +174,25 @@ const KPI = ({ title, value, isActive, onClick }) => {
 
       {isActive && (
         <>
-          <button
-            onClick={toggleSort}
-            className="absolute bottom-1 right-20 p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
-          >
-            <i className={`fas ${sortAscending ? 'fa-sort-amount-down-alt' : 'fa-sort-amount-up'} text-xs text-gray-800 dark:text-gray-200`} />
-          </button>
+          <div className="absolute bottom-1 right-20 flex gap-2">
+            <button
+              onClick={toggleView}
+              className="p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              title="Toggle View"
+            >
+              <i className={`fas ${isChartView ? 'fa-list' : 'fa-chart-pie'} text-xs text-gray-800 dark:text-gray-200`} />
+            </button>
+            <button
+              onClick={toggleSort}
+              className="p-[0.25rem] rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300"
+              title="Sort"
+            >
+              <i className={`fas ${sortAscending ? 'fa-sort-amount-down-alt' : 'fa-sort-amount-up'} text-xs text-gray-800 dark:text-gray-200`} />
+            </button>
+          </div>
 
           <div className="absolute z-50 top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <div className="p-3 space-y-2">
-              {getSubItems().map((item, index) => (
-                <div 
-                  key={index} 
-                  className="group/subitem grid grid-cols-[minmax(120px,1fr)_80px_32px] items-center gap-2 p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                >
-                  <div className="min-w-0">
-                    <p className="text-sm font-medium text-gray-600 dark:text-gray-300 truncate">{item.label}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">{item.percentage}</p>
-                  </div>
-                  <p className="text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
-                    {item.value}
-                  </p>
-                  <i className={`${getSubItemIcon(item.label)} text-xl text-gray-300 dark:text-gray-600 group-hover/subitem:text-yellow-400 transition-colors duration-300`} />
-                </div>
-              ))}
-            </div>
+            {isChartView ? renderChart() : renderList()}
           </div>
         </>
       )}
