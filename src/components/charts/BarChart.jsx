@@ -18,20 +18,27 @@ export default function BarChart({ filters, setFilters }) {
 
   return (
     <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg dark:hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.3)] transition-all duration-300">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-          Évolution des recettes
-        </h3>
-        <select
-          value={filters.period}
-          onChange={(e) => setFilters({ ...filters, period: e.target.value })}
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-        >
-          <option value="day">Jour</option>
-          <option value="week">Semaine</option>
-          <option value="month">Mois</option>
-          <option value="year">Année</option>
-        </select>
+      <div className="flex items-center mb-4">
+        <div className="w-1/4">
+          <select
+            value={filters.period}
+            onChange={(e) => setFilters({ ...filters, period: e.target.value })}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          >
+            <option value="day">Jour</option>
+            <option value="week">Semaine</option>
+            <option value="month">Mois</option>
+            <option value="year">Année</option>
+          </select>
+        </div>
+        <div className="w-1/2 text-center">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            Évolution des recettes
+          </h3>
+        </div>
+        <div className="w-1/4 flex justify-end">
+          <i className="fas fa-chart-line text-xl text-gray-300 dark:text-gray-600 group-hover:text-yellow-400 transition-colors duration-300 hover:animate-pulse" />
+        </div>
       </div>
       <div className="h-96">
         <ResponsiveContainer width="100%" height="100%">
