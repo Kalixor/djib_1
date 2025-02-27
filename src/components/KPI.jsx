@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { PieChart, Pie, Cell, ResponsiveContainer, Text } from 'recharts'
 
 const KPI = ({ title, value, isActive, onClick }) => {
   const [sortAscending, setSortAscending] = useState(true)
   const [isChartView, setIsChartView] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(null)
+  const [activeIndex, setActiveIndex] = useState(0) // Toujours un index actif par défaut
   const kpiRef = useRef(null)
 
   // Variantes de jaune
@@ -24,7 +24,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
   }
 
   const onPieLeave = () => {
-    setActiveIndex(null)
+    //setActiveIndex(null)
   }
 	
   const renderTopLabel = () => {
@@ -71,7 +71,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
             width: '100%',
             opacity: 0.2
           }}>
-            <i className={`${iconClass} text-8xl text-yellow-400`} />  {/* text-6xl -> text-8xl */}
+            <i className={`${iconClass} text-8xl text-yellow-200`} />  {/* text-6xl -> text-8xl */}
           </div>
         </foreignObject>
 
@@ -205,6 +205,12 @@ const KPI = ({ title, value, isActive, onClick }) => {
     })
   }
 
+	const cellOpacity = useMemo(() => {
+	return Array(getSubItems().length).fill(0.3).map((_, index) => 
+		index === activeIndex ? 1 : 0.3
+	)},
+	[activeIndex, getSubItems])
+	
   const toggleSort = (e) => {
     e.stopPropagation()
     setSortAscending(!sortAscending)
@@ -248,7 +254,8 @@ const KPI = ({ title, value, isActive, onClick }) => {
                   key={`cell-${index}`} 
                   fill={YELLOW_COLORS[index % YELLOW_COLORS.length]}
                   strokeWidth={activeIndex === index ? 2 : 1}
-                  stroke="#FF8C00"
+                  stroke="#FFD700"
+                  fillOpacity={cellOpacity[index]}
                 />
               ))}
             </Pie>
