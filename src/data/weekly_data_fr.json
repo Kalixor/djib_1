@@ -1,0 +1,1611 @@
+[
+    {
+        "année": 2020,
+        "mois": [
+            {
+                "nom": "Janvier",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 857
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1077
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1045
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1195
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1105
+                    }
+                ]
+            },
+            {
+                "nom": "Février",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1074
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1138
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1002
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1081
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 382
+                    }
+                ]
+            },
+            {
+                "nom": "Mars",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1004
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1156
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 838
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 922
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1151
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -665
+                    }
+                ]
+            },
+            {
+                "nom": "Avril",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 977
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 824
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 800
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 876
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1720
+                    }
+                ]
+            },
+            {
+                "nom": "Mai",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1103
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 889
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1098
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 961
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1013
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -138
+                    }
+                ]
+            },
+            {
+                "nom": "Juin",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1079
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1038
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1102
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 980
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1110
+                    }
+                ]
+            },
+            {
+                "nom": "Juillet",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1002
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 972
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 958
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 848
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 929
+                    }
+                ]
+            },
+            {
+                "nom": "Août",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 891
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1141
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 997
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 884
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 986
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 118
+                    }
+                ]
+            },
+            {
+                "nom": "Septembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 990
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 958
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 940
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1149
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 902
+                    }
+                ]
+            },
+            {
+                "nom": "Octobre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1102
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1150
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 995
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 855
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": -78
+                    }
+                ]
+            },
+            {
+                "nom": "Novembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 843
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 875
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 838
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 955
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 955
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 210
+                    }
+                ]
+            },
+            {
+                "nom": "Décembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 871
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 869
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 878
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 851
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1071
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "année": 2021,
+        "mois": [
+            {
+                "nom": "Janvier",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1162
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 932
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1196
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 884
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1074
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -755
+                    }
+                ]
+            },
+            {
+                "nom": "Février",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 957
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 864
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 996
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 840
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 361
+                    }
+                ]
+            },
+            {
+                "nom": "Mars",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1067
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 957
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1019
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1073
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 227
+                    }
+                ]
+            },
+            {
+                "nom": "Avril",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 822
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 853
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1127
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1055
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 564
+                    }
+                ]
+            },
+            {
+                "nom": "Mai",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 904
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 921
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1126
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1101
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 837
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -270
+                    }
+                ]
+            },
+            {
+                "nom": "Juin",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 939
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1094
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 854
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1126
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 606
+                    }
+                ]
+            },
+            {
+                "nom": "Juillet",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1008
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1091
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1166
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1086
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": -214
+                    }
+                ]
+            },
+            {
+                "nom": "Août",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1080
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1096
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 832
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 998
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1067
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -861
+                    }
+                ]
+            },
+            {
+                "nom": "Septembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1057
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1093
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 961
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1091
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 201
+                    }
+                ]
+            },
+            {
+                "nom": "Octobre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1032
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 822
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 980
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1131
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 812
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -629
+                    }
+                ]
+            },
+            {
+                "nom": "Novembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1000
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1003
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 904
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 900
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1031
+                    }
+                ]
+            },
+            {
+                "nom": "Décembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1019
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1110
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 851
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 936
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 531
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "année": 2022,
+        "mois": [
+            {
+                "nom": "Janvier",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 917
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 819
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 826
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1007
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 909
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 132
+                    }
+                ]
+            },
+            {
+                "nom": "Février",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 812
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 940
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1197
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 883
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 504
+                    }
+                ]
+            },
+            {
+                "nom": "Mars",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1012
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1063
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1176
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 964
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 709
+                    }
+                ]
+            },
+            {
+                "nom": "Avril",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 855
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 967
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 899
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 999
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 611
+                    }
+                ]
+            },
+            {
+                "nom": "Mai",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1140
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1136
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 814
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 864
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 949
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -443
+                    }
+                ]
+            },
+            {
+                "nom": "Juin",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 919
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 997
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1191
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1068
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 949
+                    }
+                ]
+            },
+            {
+                "nom": "Juillet",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 894
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1177
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 899
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 861
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 886
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 54
+                    }
+                ]
+            },
+            {
+                "nom": "Août",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1179
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1045
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1018
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1078
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 842
+                    }
+                ]
+            },
+            {
+                "nom": "Septembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 992
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 898
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1189
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 928
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 765
+                    }
+                ]
+            },
+            {
+                "nom": "Octobre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1171
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 850
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 939
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1038
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 847
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 411
+                    }
+                ]
+            },
+            {
+                "nom": "Novembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1076
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 925
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 916
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1073
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 941
+                    }
+                ]
+            },
+            {
+                "nom": "Décembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 920
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 804
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 843
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1160
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 564
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "année": 2023,
+        "mois": [
+            {
+                "nom": "Janvier",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 936
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 911
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1103
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1133
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 941
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 126
+                    }
+                ]
+            },
+            {
+                "nom": "Février",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 843
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 913
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 844
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 843
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 942
+                    }
+                ]
+            },
+            {
+                "nom": "Mars",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1124
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1160
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 884
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1169
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 143
+                    }
+                ]
+            },
+            {
+                "nom": "Avril",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 951
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1055
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1169
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 984
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1142
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -1294
+                    }
+                ]
+            },
+            {
+                "nom": "Mai",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 966
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 987
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1125
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1187
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 6
+                    }
+                ]
+            },
+            {
+                "nom": "Juin",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 943
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 948
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 993
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 959
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1533
+                    }
+                ]
+            },
+            {
+                "nom": "Juillet",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1161
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1143
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1023
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1166
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 933
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 5
+                    }
+                ]
+            },
+            {
+                "nom": "Août",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1138
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 983
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1142
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 863
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 619
+                    }
+                ]
+            },
+            {
+                "nom": "Septembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 958
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1023
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 908
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 977
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1545
+                    }
+                ]
+            },
+            {
+                "nom": "Octobre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 831
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1013
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 937
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1188
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 901
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 529
+                    }
+                ]
+            },
+            {
+                "nom": "Novembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 963
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1070
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1137
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 905
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 432
+                    }
+                ]
+            },
+            {
+                "nom": "Décembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1024
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1035
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 974
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1130
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1003
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 46
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "année": 2024,
+        "mois": [
+            {
+                "nom": "Janvier",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 824
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1162
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 992
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1027
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 359
+                    }
+                ]
+            },
+            {
+                "nom": "Février",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1121
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1023
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 810
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1098
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1054
+                    }
+                ]
+            },
+            {
+                "nom": "Mars",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1051
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1146
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 900
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 907
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 862
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -664
+                    }
+                ]
+            },
+            {
+                "nom": "Avril",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 865
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1077
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1097
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1077
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 219
+                    }
+                ]
+            },
+            {
+                "nom": "Mai",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1076
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 826
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1006
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 914
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1005
+                    }
+                ]
+            },
+            {
+                "nom": "Juin",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 835
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 983
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 904
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 879
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 841
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -328
+                    }
+                ]
+            },
+            {
+                "nom": "Juillet",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 887
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1037
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1045
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 970
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1430
+                    }
+                ]
+            },
+            {
+                "nom": "Août",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1132
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1013
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 867
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1039
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 283
+                    }
+                ]
+            },
+            {
+                "nom": "Septembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 913
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1165
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1179
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 1147
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1025
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": 38
+                    }
+                ]
+            },
+            {
+                "nom": "Octobre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 961
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 871
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1056
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 997
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1539
+                    }
+                ]
+            },
+            {
+                "nom": "Novembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 1019
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 909
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1008
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 815
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1401
+                    }
+                ]
+            },
+            {
+                "nom": "Décembre",
+                "semaines": [
+                    {
+                        "semaine": 1,
+                        "valeur": 887
+                    },
+                    {
+                        "semaine": 2,
+                        "valeur": 1086
+                    },
+                    {
+                        "semaine": 3,
+                        "valeur": 1193
+                    },
+                    {
+                        "semaine": 4,
+                        "valeur": 819
+                    },
+                    {
+                        "semaine": 5,
+                        "valeur": 1059
+                    },
+                    {
+                        "semaine": 6,
+                        "valeur": -468
+                    }
+                ]
+            }
+        ]
+    }
+]
