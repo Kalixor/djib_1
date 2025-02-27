@@ -37,7 +37,7 @@ export default function BarChart({ filters, setFilters }) {
           </h3>
         </div>
         <div className="w-1/4 flex justify-end">
-          <i className="fas fa-chart-line text-xl text-gray-300 dark:text-gray-600 group-hover:text-yellow-400 transition-colors duration-300 hover:animate-pulse" />
+          <i className="fas fa-chart-line text-3xl text-gray-300 dark:text-gray-600 group-hover:text-yellow-400 transition-colors duration-300 hover:animate-pulse" />
         </div>
       </div>
       <div className="h-96">
