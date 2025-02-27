@@ -311,7 +311,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
           <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-2xl font-bold text-gray-900 dark:text-white">
+          <p className="text-xl font-bold text-gray-900 dark:text-white">
             {value}
           </p>
         </div>
@@ -413,7 +413,5 @@ const KPI = ({ title, value, isActive, onClick }) => {
     </div>
   )
 }
-
-
 
 export default KPI
