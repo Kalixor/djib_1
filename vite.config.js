@@ -5,5 +5,9 @@ import { defineConfig } from 'vite'
       plugins: [react()],
       optimizeDeps: {
         include: ['react', 'react-dom', 'recharts']
-      }
+      },
+	  server: {
+		allowedHosts: ['djib_poc.karl-fixto.net', 'djib-poc.karl-fixto.net'],
+		port: 3476
+	}
     })
