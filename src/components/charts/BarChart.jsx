@@ -1,6 +1,9 @@
 import { BarChart as ReBarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { useState } from 'react'
 
 export default function BarChart({ filters, setFilters }) {
+  const [isHovered, setIsHovered] = useState(false)
+
   const data = [
     { name: 'Janvier', value: 4200 },
     { name: 'Février', value: 3800 },
@@ -17,7 +20,22 @@ export default function BarChart({ filters, setFilters }) {
   ]
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg dark:hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.3)] transition-all duration-300">
+    <div 
+      className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg dark:hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.3)] transition-all duration-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <style jsx>{`
+        @keyframes smoothBounce {
+          0%, 100% { transform: translateY(0); }
+          12.5% { transform: translateY(-10px); }
+          25% { transform: translateY(0); }
+          37.5% { transform: translateY(-7px); }
+          50% { transform: translateY(0); }
+          62.5% { transform: translateY(-4px); }
+          75% { transform: translateY(0); }
+        }
+      `}</style>
       <div className="flex items-center mb-4">
         <div className="w-1/4">
           <select
@@ -37,7 +55,11 @@ export default function BarChart({ filters, setFilters }) {
           </h3>
         </div>
         <div className="w-1/4 flex justify-end">
-          <i className="fas fa-chart-line text-3xl text-gray-300 dark:text-gray-600 group-hover:text-yellow-400 transition-colors duration-300 hover:animate-pulse" />
+          <i className={`fas fa-chart-line text-3xl ${
+            isHovered 
+              ? 'text-yellow-400 animate-[smoothBounce_1.5s_ease-in-out]' 
+              : 'text-gray-300 dark:text-gray-600'
+          } transition-colors duration-300`} />
         </div>
       </div>
       <div className="h-96">
