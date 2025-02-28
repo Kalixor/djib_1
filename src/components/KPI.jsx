@@ -368,7 +368,7 @@ const KPI = ({ title, value, isActive, onClick }) => {
       onMouseEnter={() => setIsHovered(true)} // Gestion du hover
       onMouseLeave={() => setIsHovered(false)}
     >
-      <style jsx>{`
+      <style>{`
         @keyframes smoothBounce {
           0%, 100% { transform: translateY(0); }
           12.5% { transform: translateY(-10px); }

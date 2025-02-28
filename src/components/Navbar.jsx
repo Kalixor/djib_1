@@ -24,8 +24,9 @@ export default function Navbar() {
         {/* Titre centré absolument */}
         <h1 className="text-xl font-bold text-gray-800 dark:text-white text-center absolute left-1/2 transform -translate-x-1/2">
           Activités des Douanes
-          <h2 className="text-sm text-gray-400"> Au {getCurrentDate()}</h2>
+					<p className="text-sm text-gray-400"> Au {getCurrentDate()}</p>
         </h1>
+				
         {/* Conteneur des boutons à droite */}
         <div className="flex items-center gap-4">
           {/* Bouton sélecteur de période */}
